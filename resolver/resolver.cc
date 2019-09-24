@@ -848,6 +848,26 @@ public:
 
 class ResolveTypeParamsWalk {
 public:
+    unique_ptr<ast::ClassDef> postTransformClassDef(core::MutableContext ctx, unique_ptr<ast::ClassDef> original) {
+        auto klass = original->symbol;
+
+        // The resolve constants pass ensures that the singleton exists already
+        auto singleton = klass.data(ctx)->singletonClass(ctx);
+        ENFORCE(singleton.exists());
+
+        // When AttachedClass is present on the singleton, update its upper
+        // bound now that all of the other type members have been defined.
+        auto attachedClass = singleton.data(ctx)->findMember(ctx, core::Names::Constants::AttachedClass());
+        if (attachedClass.exists()) {
+            auto *lambdaParam = core::cast_type<core::LambdaParam>(attachedClass.data(ctx)->resultType.get());
+            ENFORCE(lambdaParam != nullptr);
+
+            lambdaParam->upperBound = klass.data(ctx)->externalType(ctx);
+        }
+
+        return original;
+    }
+
     unique_ptr<ast::Assign> postTransformAssign(core::MutableContext ctx, unique_ptr<ast::Assign> asgn) {
         auto *id = ast::cast_tree<ast::ConstantLit>(asgn->lhs.get());
         if (id == nullptr || !id->symbol.exists()) {
