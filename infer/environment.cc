@@ -476,9 +476,9 @@ void Environment::updateKnowledge(core::Context ctx, core::LocalVariable local, 
     } else if (send->fun == core::Names::lessThan()) {
         const auto &recvKlass = send->recv.type;
         const auto &argType = send->args[0].type;
-        auto *argClass = core::cast_type<core::ClassType>(argType.get());
+        auto *argClass = core::cast_type<core::AppliedType>(argType.get());
         if (!argClass || !recvKlass->derivesFrom(ctx, core::Symbols::Class()) ||
-            !argClass->symbol.data(ctx)->derivesFrom(ctx, core::Symbols::Class())) {
+            !argClass->klass.data(ctx)->derivesFrom(ctx, core::Symbols::Class())) {
             return;
         }
         auto &whoKnows = getKnowledge(local);
