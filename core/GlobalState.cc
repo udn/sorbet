@@ -52,7 +52,7 @@ GlobalState::GlobalState(shared_ptr<ErrorQueue> errorQueue)
     // Empirically determined to be the smallest powers of two larger than the
     // values required by the payload
     unsigned int maxNameCount = 8192;
-    unsigned int maxSymbolCount = 16384;
+    unsigned int maxSymbolCount = 32768;
 
     names.reserve(maxNameCount);
     symbols.reserve(maxSymbolCount);
