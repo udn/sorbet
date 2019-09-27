@@ -2,12 +2,14 @@ No errors! Great job.
 class ::<root> ()
   field #$global @ test/cli/stop-after-namer/stop-after-namer.rb:7
   class ::A < ::<todo sym> () @ test/cli/stop-after-namer/stop-after-namer.rb:3
+    static-field ::A::AttachedClass -> <Alias: ::<Class:A>::AttachedClass > @ test/cli/stop-after-namer/stop-after-namer.rb:3
     method ::A#method (method_arg, <blk>) @ test/cli/stop-after-namer/stop-after-namer.rb:4
       argument method_arg<> @ Loc {file=test/cli/stop-after-namer/stop-after-namer.rb start=4:14 end=4:24}
       argument <blk><block> @ Loc {file=test/cli/stop-after-namer/stop-after-namer.rb start=??? end=???}
-  class ::<Class:A> < ::<todo sym> () @ test/cli/stop-after-namer/stop-after-namer.rb:3
+  class ::<Class:A>[AttachedClass] < ::<todo sym> () @ test/cli/stop-after-namer/stop-after-namer.rb:3
     method ::<Class:A>#<static-init> (<blk>) @ test/cli/stop-after-namer/stop-after-namer.rb:3
       argument <blk><block> @ Loc {file=test/cli/stop-after-namer/stop-after-namer.rb start=??? end=???}
+    type-member(+) ::<Class:A>::AttachedClass -> T.class_of(A)::AttachedClass @ test/cli/stop-after-namer/stop-after-namer.rb:3
     method ::<Class:A>#singleton_method (singleton_method_arg, <blk>) @ test/cli/stop-after-namer/stop-after-namer.rb:10
       argument singleton_method_arg<> @ Loc {file=test/cli/stop-after-namer/stop-after-namer.rb start=10:29 end=10:49}
       argument <blk><block> @ Loc {file=test/cli/stop-after-namer/stop-after-namer.rb start=??? end=???}
