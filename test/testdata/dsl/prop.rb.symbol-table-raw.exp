@@ -1,9 +1,11 @@
 class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {file=test/testdata/dsl/prop.rb start=2:1 end=147:4}, Loc {file=https://github.com/sorbet/sorbet/tree/master/bazel-out/host/genfiles/rbi/procs.rbi start=1:1 end=252:4})
-  class <S <C <U <root>>> $1> < <S <C <U Object>> $1> ()
+  class <S <C <U <root>>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> ()
     method <S <C <U <root>>> $1><N <U <static-init>> $CENSORED> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=2:1 end=147:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
   class <C <U AdvancedODM>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=37:1 end=37:18}
+    static-field <C <U AdvancedODM>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U AdvancedODM>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=37:7 end=37:18}
     class <C <U AdvancedODM>><C <U Mutator>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=52:5 end=52:68}
+      static-field <C <U AdvancedODM>><C <U Mutator>><C <U AttachedClass>> -> AliasType { symbol = <C <U AdvancedODM>><S <C <U Mutator>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=43:5 end=43:23}
       method <C <U AdvancedODM>><C <U Mutator>><U array> (<blk>) -> AppliedType {
         klass = <C <U Chalk>><C <U ODM>><C <U Mutator>><C <U Private>><C <U ArrayMutator>>
         targs = [
@@ -85,9 +87,10 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
       } @ Loc {file=test/testdata/dsl/prop.rb start=46:5 end=46:36}
         argument t_array<> -> T::Array[String] @ Loc {file=test/testdata/dsl/prop.rb start=46:11 end=46:18}
         argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
-    class <C <U AdvancedODM>><S <C <U Mutator>> $1> < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=43:5 end=43:23}
+    class <C <U AdvancedODM>><S <C <U Mutator>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=43:5 end=43:23}
       method <C <U AdvancedODM>><S <C <U Mutator>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=43:5 end=43:23}
         argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+      type-member(+) <C <U AdvancedODM>><S <C <U Mutator>> $1><C <U AttachedClass>> -> LambdaParam(<C <U AdvancedODM>><S <C <U Mutator>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=AdvancedODM::Mutator) @ Loc {file=test/testdata/dsl/prop.rb start=43:5 end=43:23}
     method <C <U AdvancedODM>><U array> (<blk>) -> AppliedType {
       klass = <C <U Array>>
       targs = [
@@ -260,10 +263,12 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
     method <C <U AdvancedODM>><U type=> (type, <blk>) -> String @ Loc {file=test/testdata/dsl/prop.rb start=41:5 end=41:29}
       argument type<> -> String @ Loc {file=test/testdata/dsl/prop.rb start=41:11 end=41:15}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
-  class <S <C <U AdvancedODM>> $1> < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=37:7 end=37:18}
+  class <S <C <U AdvancedODM>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=37:7 end=37:18}
     method <S <C <U AdvancedODM>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=37:1 end=63:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+    type-member(+) <S <C <U AdvancedODM>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U AdvancedODM>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=AdvancedODM) @ Loc {file=test/testdata/dsl/prop.rb start=37:7 end=37:18}
   class <C <U EncryptedProp>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=79:1 end=79:20}
+    static-field <C <U EncryptedProp>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U EncryptedProp>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=79:7 end=79:20}
     method <C <U EncryptedProp>><U bar> (<blk>) -> String | NilClass @ Loc {file=test/testdata/dsl/prop.rb start=81:3 end=81:56}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
     method <C <U EncryptedProp>><U encrypted_bar> (<blk>) -> Opus::DB::Model::Mixins::Encryptable::EncryptedValue | NilClass @ Loc {file=test/testdata/dsl/prop.rb start=81:3 end=81:56}
@@ -278,17 +283,22 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
     method <C <U EncryptedProp>><U foo=> (foo, <blk>) -> String | NilClass @ Loc {file=test/testdata/dsl/prop.rb start=80:3 end=80:22}
       argument foo<> -> T.nilable(String) @ Loc {file=test/testdata/dsl/prop.rb start=80:19 end=80:22}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
-  class <S <C <U EncryptedProp>> $1> < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=79:7 end=79:20}
+  class <S <C <U EncryptedProp>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=79:7 end=79:20}
     method <S <C <U EncryptedProp>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=79:1 end=82:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+    type-member(+) <S <C <U EncryptedProp>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U EncryptedProp>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=EncryptedProp) @ Loc {file=test/testdata/dsl/prop.rb start=79:7 end=79:20}
   class <C <U ForeignClass>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=34:1 end=34:19}
-  class <S <C <U ForeignClass>> $1> < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=34:7 end=34:19}
+    static-field <C <U ForeignClass>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U ForeignClass>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=34:7 end=34:19}
+  class <S <C <U ForeignClass>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=34:7 end=34:19}
     method <S <C <U ForeignClass>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=34:1 end=35:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+    type-member(+) <S <C <U ForeignClass>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U ForeignClass>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=ForeignClass) @ Loc {file=test/testdata/dsl/prop.rb start=34:7 end=34:19}
   class <C <U NotAODM>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=2:1 end=2:14}
-  class <S <C <U NotAODM>> $1> < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=2:7 end=2:14}
+    static-field <C <U NotAODM>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U NotAODM>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=2:7 end=2:14}
+  class <S <C <U NotAODM>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=2:7 end=2:14}
     method <S <C <U NotAODM>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=2:1 end=21:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+    type-member(+) <S <C <U NotAODM>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U NotAODM>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=NotAODM) @ Loc {file=test/testdata/dsl/prop.rb start=2:7 end=2:14}
     method <S <C <U NotAODM>> $1><U prop> (args, <blk>) @ Loc {file=test/testdata/dsl/prop.rb start=3:5 end=3:25}
       argument args<repeated> @ Loc {file=test/testdata/dsl/prop.rb start=3:20 end=3:24}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
@@ -296,6 +306,7 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
     method <C <U Object>><U main> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=84:1 end=84:9}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
   class <C <U PropHelpers>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=65:1 end=65:18}
+    static-field <C <U PropHelpers>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U PropHelpers>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=65:7 end=65:18}
     method <C <U PropHelpers>><U created> (<blk>) -> Float @ Loc {file=test/testdata/dsl/prop.rb start=67:3 end=67:15}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
     method <C <U PropHelpers>><U created=> (created, <blk>) -> Float @ Loc {file=test/testdata/dsl/prop.rb start=67:3 end=67:15}
@@ -306,10 +317,12 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
     method <C <U PropHelpers>><U token=> (token, <blk>) -> String @ Loc {file=test/testdata/dsl/prop.rb start=66:3 end=66:13}
       argument token<> -> String @ Loc {file=test/testdata/dsl/prop.rb start=66:3 end=66:8}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
-  class <S <C <U PropHelpers>> $1> < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=65:7 end=65:18}
+  class <S <C <U PropHelpers>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=65:7 end=65:18}
     method <S <C <U PropHelpers>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=65:1 end=68:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+    type-member(+) <S <C <U PropHelpers>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U PropHelpers>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=PropHelpers) @ Loc {file=test/testdata/dsl/prop.rb start=65:7 end=65:18}
   class <C <U PropHelpers2>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=70:1 end=70:19}
+    static-field <C <U PropHelpers2>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U PropHelpers2>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=70:7 end=70:19}
     method <C <U PropHelpers2>><U created> (<blk>) -> Float @ Loc {file=test/testdata/dsl/prop.rb start=72:3 end=72:32}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
     method <C <U PropHelpers2>><U token> (<blk>) -> String @ Loc {file=test/testdata/dsl/prop.rb start=71:3 end=71:25}
@@ -317,16 +330,20 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
     method <C <U PropHelpers2>><U token=> (token, <blk>) -> String @ Loc {file=test/testdata/dsl/prop.rb start=71:3 end=71:25}
       argument token<> -> String @ Loc {file=test/testdata/dsl/prop.rb start=71:15 end=71:20}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
-  class <S <C <U PropHelpers2>> $1> < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=70:7 end=70:19}
+  class <S <C <U PropHelpers2>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=70:7 end=70:19}
     method <S <C <U PropHelpers2>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=70:1 end=73:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+    type-member(+) <S <C <U PropHelpers2>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U PropHelpers2>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=PropHelpers2) @ Loc {file=test/testdata/dsl/prop.rb start=70:7 end=70:19}
   class <C <U ShardingProp>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=75:1 end=75:19}
+    static-field <C <U ShardingProp>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U ShardingProp>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=75:7 end=75:19}
     method <C <U ShardingProp>><U merchant> (<blk>) -> String @ Loc {file=test/testdata/dsl/prop.rb start=76:3 end=76:16}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
-  class <S <C <U ShardingProp>> $1> < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=75:7 end=75:19}
+  class <S <C <U ShardingProp>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> () @ Loc {file=test/testdata/dsl/prop.rb start=75:7 end=75:19}
     method <S <C <U ShardingProp>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=75:1 end=77:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+    type-member(+) <S <C <U ShardingProp>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U ShardingProp>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=ShardingProp) @ Loc {file=test/testdata/dsl/prop.rb start=75:7 end=75:19}
   class <C <U SomeODM>> < <C <U Object>> () @ Loc {file=test/testdata/dsl/prop.rb start=23:1 end=23:14}
+    static-field <C <U SomeODM>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U SomeODM>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/prop.rb start=23:7 end=23:14}
     method <C <U SomeODM>><U foo> (<blk>) -> String @ Loc {file=test/testdata/dsl/prop.rb start=26:5 end=26:22}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
     method <C <U SomeODM>><U foo2> (<blk>) -> String | NilClass @ Loc {file=test/testdata/dsl/prop.rb start=29:5 end=29:13}
@@ -337,7 +354,8 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
     method <C <U SomeODM>><U foo=> (foo, <blk>) -> String @ Loc {file=test/testdata/dsl/prop.rb start=26:5 end=26:22}
       argument foo<> -> String @ Loc {file=test/testdata/dsl/prop.rb start=26:11 end=26:14}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
-  class <S <C <U SomeODM>> $1> < <S <C <U Object>> $1> (<C <U Sig>>) @ Loc {file=test/testdata/dsl/prop.rb start=23:7 end=23:14}
+  class <S <C <U SomeODM>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> (<C <U Sig>>) @ Loc {file=test/testdata/dsl/prop.rb start=23:7 end=23:14}
     method <S <C <U SomeODM>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/prop.rb start=23:1 end=32:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/prop.rb start=??? end=???}
+    type-member(+) <S <C <U SomeODM>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U SomeODM>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=SomeODM) @ Loc {file=test/testdata/dsl/prop.rb start=23:7 end=23:14}
 

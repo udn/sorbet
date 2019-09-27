@@ -3,6 +3,7 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
     field <C <U TestAttr>><U @v1> -> Integer @ Loc {file=test/testdata/dsl/attr.rb start=7:5 end=7:8}
     field <C <U TestAttr>><U @v2> -> String @ Loc {file=test/testdata/dsl/attr.rb start=8:5 end=8:8}
     field <C <U TestAttr>><U @v6> -> String @ Loc {file=test/testdata/dsl/attr.rb start=9:5 end=9:8}
+    static-field <C <U TestAttr>><C <U AttachedClass>> -> AliasType { symbol = <S <C <U TestAttr>> $1><C <U AttachedClass>> } @ Loc {file=test/testdata/dsl/attr.rb start=2:7 end=2:15}
     method <C <U TestAttr>><U initialize> (<blk>) -> Sorbet::Private::Static::Void @ Loc {file=test/testdata/dsl/attr.rb start=6:3 end=6:17}
       argument <blk><block> -> T.untyped @ Loc {file=test/testdata/dsl/attr.rb start=??? end=???}
     method <C <U TestAttr>><U v1> (<blk>) -> Integer @ Loc {file=test/testdata/dsl/attr.rb start=13:3 end=13:11}
@@ -23,7 +24,8 @@ class <C <U <root>>> < <C <U Object>> () @ (... removed core rbi locs ..., Loc {
     method <C <U TestAttr>><U v5=> (v5, <blk>) @ Loc {file=test/testdata/dsl/attr.rb start=23:3 end=23:23}
       argument v5<> @ Loc {file=test/testdata/dsl/attr.rb start=23:21 end=23:23}
       argument <blk><block> @ Loc {file=test/testdata/dsl/attr.rb start=??? end=???}
-  class <S <C <U TestAttr>> $1> < <S <C <U Object>> $1> (<C <U Sig>>) @ Loc {file=test/testdata/dsl/attr.rb start=2:7 end=2:15}
+  class <S <C <U TestAttr>> $1>[<C <U AttachedClass>>] < <S <C <U Object>> $1> (<C <U Sig>>) @ Loc {file=test/testdata/dsl/attr.rb start=2:7 end=2:15}
     method <S <C <U TestAttr>> $1><U <static-init>> (<blk>) @ Loc {file=test/testdata/dsl/attr.rb start=2:1 end=26:4}
       argument <blk><block> @ Loc {file=test/testdata/dsl/attr.rb start=??? end=???}
+    type-member(+) <S <C <U TestAttr>> $1><C <U AttachedClass>> -> LambdaParam(<S <C <U TestAttr>> $1><C <U AttachedClass>>, lower=T.noreturn, upper=TestAttr) @ Loc {file=test/testdata/dsl/attr.rb start=2:7 end=2:15}
 
