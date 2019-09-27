@@ -335,7 +335,7 @@ subgraph "cluster_::<Class:ControlFlow>#<static-init>" {
     "bb::<Class:ControlFlow>#<static-init>_1" [shape = parallelogram];
 
     "bb::<Class:ControlFlow>#<static-init>_0" [
-        label = "block[id=0]()\l<self>: T.class_of(ControlFlow) = cast(<self>: NilClass, T.class_of(ControlFlow));\l<block-pre-call-temp>$5: Sorbet::Private::Static::Void = <self>: T.class_of(ControlFlow).sig()\l<selfRestore>$6: T.class_of(ControlFlow) = <self>\l<unconditional>\l"
+        label = "block[id=0]()\l<self>: T.class_of(ControlFlow) = cast(<self>: NilClass, AppliedType {\l  klass = <S <C <U ControlFlow>> $1>\l  targs = [\l    <C <U AttachedClass>> = SelfTypeParam(<S <C <U ControlFlow>> $1><C <U AttachedClass>>)\l  ]\l});\l<block-pre-call-temp>$5: Sorbet::Private::Static::Void = <self>: T.class_of(ControlFlow).sig()\l<selfRestore>$6: T.class_of(ControlFlow) = <self>\l<unconditional>\l"
     ];
 
     "bb::<Class:ControlFlow>#<static-init>_0" -> "bb::<Class:ControlFlow>#<static-init>_2" [style="bold"];
