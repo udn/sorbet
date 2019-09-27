@@ -1,6 +1,7 @@
 #include "parser/Builder.h"
 #include "common/typecase.h"
 #include "core/Names.h"
+#include "core/errors/parser.h"
 #include "parser/Dedenter.h"
 #include "parser/parser.h"
 
@@ -392,8 +393,15 @@ public:
 
         core::NameRef method;
         if (selector == nullptr) {
-            // when the selector is missing, this is a use of the `call` method.
-            method = core::Names::call();
+            if (args.size() == 0) {
+                method = core::Names::missingFun();
+                if (auto e = gs_.beginError(loc, core::errors::Parser::ParserError)) {
+                    e.setHeader("Parse Error: Expected method name");
+                }
+            } else {
+                // when the selector is missing but there are args, this is a use of the `call` method (`x.(1)`)
+                method = core::Names::call();
+            }
         } else {
             method = gs_.enterNameUTF8(selector->string());
         }
